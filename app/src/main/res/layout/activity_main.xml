@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple_700">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="#E09846"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewU.S"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="U.S dollar"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:layout_marginStart="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editU.S"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:hint="U.S dollar"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewU.S"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/textViewEgypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egyptian pound"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="23dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editU.S" />
+
+    <EditText
+        android:id="@+id/editEgypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:inputType="number"
+        android:hint="Egyptian pound"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEgypt"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:onClick="convert"
+        android:padding="10dp"
+        android:text="Convert"
+        android:layout_marginLeft="25dp"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEgypt"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:onClick="clear"
+        android:padding="10dp"
+        android:text="Clear"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEgypt"
+        app:layout_constraintStart_toEndOf="@+id/btnConvert"
+        app:layout_constraintWidth_percent="0.4" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
